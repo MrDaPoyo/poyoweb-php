@@ -31,11 +31,14 @@ $db = new SQLite3('users.db');
     $stmt->bindValue(':join_date', $current_date, SQLITE3_TEXT);
 
     $stmt->execute();
-    $userDir = "/users/" . $username;
+    $userDir = "users/" . $username;
     exec("sudo useradd $username", $output, $return_var);
-    if($return_var !== 0){
+    if($return_var == 0){
         mkdir($userDir, 0777, true);
         exec("sudo chown $username:$username $userDir");
         exec("sudo chmod 700 $userDir");
+    }
+    else {
+        http_response_code(322); // Bad request
     }
 ?>
