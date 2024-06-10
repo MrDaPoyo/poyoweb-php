@@ -2,9 +2,26 @@
 <html>
     <head>
         <title>Poyoweb!</title>
+        <link rel="stylesheet" href="https://unpkg.com/98.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/forms.js"></script>
     </head>
-    <body>
-        <h1>Poyoweb!</h1>
-
-    </body>
+        <body>
+            <div class="window" style="height: 100vh;">
+                <div class="title-bar">
+                  <div class="title-bar-text">Poyoweb Terminal</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                  </div>
+                </div>
+            <div class="window-body">
+                <div id="terminal"></div>
+                <script src ="script.js"></script>
+            </div></div>
+        </body>
+    
 </html>
