@@ -37,6 +37,9 @@ $db = new SQLite3('users.db');
         mkdir($userDir, 0777, true);
         exec("sudo chown $username:$username $userDir");
         exec("sudo chmod 700 $userDir");
+        exec("cp example/index.html $userDir/index.html");
+        // Set password for the new user
+        exec("echo $username:$password_hash | sudo chpasswd");
     }
     else {
         http_response_code(322); // Bad request
