@@ -3,6 +3,7 @@
     <head>
         <title>Poyoweb!</title>
         <link rel="stylesheet" href="https://unpkg.com/98.css">
+        <link rel="stylesheet" href="css/styles.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css">
@@ -27,8 +28,13 @@
                   <div class="title-bar-text">Poyoweb Authentication</div>
                 </div>
                 <div class="window-body">
-                  
+              <div>
               <p>Welcome back, traveler!</p>
+              <ul>
+                <li>Use /login to login to your account</li>
+                <li>Use /register to create a new account</li>
+              </ul>
+              </div>
               <form style="width:25%;">
                 <div class="field-row-stacked" style="width:100%;">
                   <label for="text18">Username</label>
@@ -39,12 +45,11 @@
                   <input id="text19" type="text" />
                 </div>
                 <button type="submit" style="width:49.5%;">Login</button>
-                <button type="submit" style="width:49.5%;">Register</button>
+                <button type="submit" action="" style="width:49.5%;">Register</button>
               </form>
                 </div>
                 <div class="status-bar">
-                    <p class="status-bar-field">/login to login</p>
-                    <p class="status-bar-field">/register to register<p>
+                    <p class="status-bar-field">Use /help to see all available commands<p>
                     <p class="status-bar-field">0 websites hosted on the Poyoweb!<p></p>
                 </div>
               </div>

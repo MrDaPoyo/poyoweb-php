@@ -1,0 +1,10 @@
+body {
+    background-image: url("../images/win98sky.webp");
+    background-color: #009999;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
