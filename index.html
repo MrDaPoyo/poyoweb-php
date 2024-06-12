@@ -9,7 +9,7 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/forms.js"></script>
     </head>
         <body>
-            <div class="window" style="height: 100vh;">
+            <div class="window" style="height: 50vh;">
                 <div class="title-bar">
                   <div class="title-bar-text">Poyoweb Terminal</div>
                   <div class="title-bar-controls">
@@ -18,10 +18,32 @@
                     <button aria-label="Close"></button>
                   </div>
                 </div>
-            <div class="window-body">
-                <div id="terminal"></div>
+            <div class="window-body"  style="height:87.75%;">
+                <div id="terminal" style="height:100%;"></div>
                 <script src ="script.js"></script>
             </div></div>
+            <div class="window">
+                <div class="title-bar">
+                  <div class="title-bar-text">Poyoweb Authentication</div>
+                </div>
+                <div class="window-body">
+                  
+              <p>Welcome back, traveler!</p>
+              <div class="field-row-stacked" style="width: 200px">
+                <label for="text18">Username</label>
+                <input id="text18" type="text" />
+              </div>
+              <div class="field-row-stacked" style="width: 200px">
+                <label for="text19">Password</label>
+                <input id="text19" type="text" />
+              </div>
+                </div>
+                <div class="status-bar">
+                    <p class="status-bar-field">/login to login</p>
+                    <p class="status-bar-field">/register to register<p>
+                    <p class="status-bar-field">0 websites hosted on the Poyoweb!<p></p>
+                </div>
+              </div>
         </body>
     
 </html>
