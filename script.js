@@ -72,9 +72,16 @@ var term = $('#terminal').terminal({
             xhr.open("POST", "login.php", true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.onreadystatechange = function () {
-              if (xhr.readyState == 4 && xhr.status == 200) {
-                window.location.href = '';  //add location here !important!
-              }
+                if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                  term.echo("Login successful. :3");
+                  setTimeout(function() {
+                    window.location.href = '';  //add location here !important!
+                  }, 1000);
+                  
+                } else {
+                  term.echo("Invalid username or password. :(");
+                }}
             };
             xhr.send("username=" + encodeURIComponent(form.name) + "&password=" + encodeURIComponent(hashedPassword));
           });

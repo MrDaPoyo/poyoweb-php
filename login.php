@@ -15,12 +15,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["username"]) && isset($
         // Password matches, set session variables
         $_SESSION["username"] = $username;
         $_SESSION["logged_in"] = true;
-
+        
         // You can redirect the user to a different page or echo a success message here
-        header("Location: https://hosting.poyo.study");
+        http_response_code(200);
+        
+        echo "Logged in successfully.";
     } else {
         // Password does not match or username does not exist
         http_response_code(401); // Unauthorized
         echo "Invalid username or password.";
+        exit;
     }
 }
